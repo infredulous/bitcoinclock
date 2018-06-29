@@ -16,8 +16,6 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
             var total_number = 12.5 * (height - 472500) + 16406250;
             var append_html = "<p>Total number of bitcoins in existence<br><span style='font-size: 2rem;font-weight: 100'>" + total_number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</span></p>";
 
-            var cur_inflation = 12.5 * 144 * 365.25 / total_number * 100;
-            append_html += "<br>Current Inflation: " + cur_inflation.toFixed(3) + "%";
             
             var til_halving = 630000 - height;
             append_html += "<br>Blocks Until Halving: " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -29,4 +27,4 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
     });
 </script>
 
-<img src="/clock.png" style="max-width: 800px;">
+<img src="/clock.png" style="width: 500px;">
