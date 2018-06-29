@@ -24,6 +24,9 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
             
             var bitcoins_remaining = 21000000 - total_number;
             append_html += "<br>Bitcoins Left to Be Mined: " + bitcoins_remaining.toFixed(1).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            
+            var til_halving = 630000 - height;
+            append_html += "<br>Blocks Until Halving: " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
             console.log(append_html);
 
