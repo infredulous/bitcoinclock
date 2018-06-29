@@ -3,12 +3,6 @@ layout: default
 seo_title: "2020 Bitcoin Halving Countdown & Date ETA (Bitcoin Clock)"
 title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 ---
-
-<img src="/clock.png" style="width: 500px;display: block;margin: 0 auto;">
-
-<div id="calc-content-div" style="text-align: center;"></div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <script>
     var height;
     jQuery(document).ready(function($){
@@ -30,10 +24,13 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
             console.log("Minutes until halving - " + minutes_til_halving);
             
              console.log("Days until halving - " + Math.floor(days_til_halving));
+             var days_calced = Math.floor(days_til_halving);
              
               console.log("Hours until halving - " + Math.floor(days_remainder * 24));
               
               console.log("Minutes until halving - " + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+              
+              $('#days_calc').text(days_calced);
 
 
 
@@ -41,3 +38,43 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
         });
     });
 </script>
+
+
+<p><b>Block Halving ETA:</b> <span id="days_calc"></span> days</p>
+
+<img src="/clock.png" style="width: 500px;display: block;margin: 0 auto;">
+
+<div id="calc-content-div" style="text-align: center;"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<h2>Bitcoin Halving Date ETA</h2><p></p>
+
+
+<h2>When is the Next Bitcoin Halving, after the 2020 Halving?</h2>
+<p></p>
+
+
+<h2>What is The Halvening? </h2>
+<p></p>
+
+<h2>What is the Significance of the Reward Halving?</h2>
+<p></p>
+
+<h2>Bitcoin Halving Schedule</h2>
+<p></p>
+
+<h2>Why Is There Hype Around the Halving?</h2>
+<p></p>
+
+<h2>Bitcoin Halving History</h2>
+<p></p>
+
+<h2>Current Bitcoin Block Reward</h2>
+<p></p>
+
+<h2>Bitcoin Halving Parties</h2>
+<p></p>
+
+<h2>Is There an Ethereum Block Reward Halving Countdown? </h2>
+<p></p>
