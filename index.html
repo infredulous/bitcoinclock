@@ -33,7 +33,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
              
               console.log("Hours until halving - " + Math.floor(days_remainder * 24));
               
-              console.log("Minutes until halving - " + (minutes * 60));
+              console.log("Minutes until halving - " + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
 
 
