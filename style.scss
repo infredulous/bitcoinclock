@@ -1,0 +1,463 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+.thirty-day {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+
+.sixty-day {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+
+.volatility .stat {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+	background: $white;
+  font: 18px/1.4 $helvetica;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $helveticaNeue;
+  color: $darkerGray;
+  font-weight: bold;
+
+  line-height: 1.7;
+  margin: 1em 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $gray;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: #ec2028;
+  text-decoration: none;
+	cursor: pointer;
+	border-bottom: 2px solid #ccc;
+  &:hover, &:active {
+    color: #b1181e;
+  }
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+.date {
+  font-style: italic;
+  color: $gray;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: $lightGray;
+}
+::selection {
+  color: $black;
+  background: $lightGray;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+  margin-bottom: 50px;
+}
+
+.masthead {
+  padding: 20px 0;
+  border-bottom: 1px solid $lightGray;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.site-avatar {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  border: none;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+}
+
+.site-avatar:hover {
+	border: none !important;
+}
+
+.site-info {
+  float: left;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-name {
+  margin: 0;
+  color: $darkGray;
+  cursor: pointer;
+  font-family: $helveticaNeue;
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: 1px;
+  a {
+	  border: none;
+  }
+}
+
+.site-description {
+  margin: -5px 0 0 0;
+  color: $gray;
+  font-size: 16px;
+
+  @include mobile {
+    margin: 3px 0;
+  }
+}
+
+nav {
+  float: right;
+  margin-top: 23px; // @TODO: Vertically middle align
+  font-family: $helveticaNeue;
+  font-size: 18px;
+
+  @include mobile {
+    float: none;
+    margin-top: 9px;
+    display: block;
+    font-size: 16px;
+  }
+
+  a {
+    margin-left: 20px;
+    color: $darkGray;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: 0;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $blue;
+    }
+  }
+}
+
+//
+// .main
+//
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+.wrapper-footer {
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: $lightGray;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  a {
+	  border: none;
+  }
+}
+
+.posts-home {
+	a {
+		border: none;
+	}
+}
+
+// BITCOIN MINING CALCULATOR
+
+.half-section-calc {
+	margin-bottom: 15px; 
+	float: left;
+	width: 50%;
+	font-weight: bold;
+}
+
+.new-calc-break {
+	clear: both;
+}
+
+.half-section-calc input {
+	font-family: Proxima;
+	width: 98%;
+	padding: 6px;
+	padding: 6px;
+	font-size: 16px;
+}
+
+.half-section-calc #hash_rate {
+	width: 70%;
+}
+
+.half-section-calc #unit_select {
+	font-family: Proxima;
+	font-size: 15px;
+	height: 33px;
+	padding: 0;
+	width: 75px;
+}
+
+.negative-earning, .positive-earning {
+    display: block;
+    float: left;
+    margin-bottom: 0;
+    margin-top: -1px;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+    
+    .profit {
+    	color: #fff !important;
+    	text-align: center !important;
+		
+		    .data-label {
+				color: #fff !important;
+				}
+    }
+    
+}
+
+.earnings {
+	border-right: 1px solid #ccc;
+}
+
+.earnings, .electricity, .profit {
+    float: left;
+    font-size: 22px;
+    padding: 25px 10px;
+    width: 25%;
+    text-align: center !important;
+}
+
+.negative-earning .electricity, .negative-earning .profit, .negative-earning .earnings {
+	color: #d9534f;
+	text-align: center !important;
+}
+
+.positive-earning .electricity, .positive-earning .profit, .positive-earning .earnings {
+    color: #5cb85c;
+}
+
+.positive-earning .profit {
+    background: #5cb85c none repeat scroll 0 0;
+}
+
+.negative-earning .profit {
+    background: #d9534f none repeat scroll 0 0;
+}
+
+.earned_btc_month::after, .earned_btc_day::after, .earned_btc_year::after {
+		content: "BTC";
+}
+
+.data-label {
+    color: #b9b9b9;
+    display: block;
+    font-size: 14px;
+    margin-top: -3px;
+}
+
+@media (max-width: 760px) { 
+
+	#calc-content-div .negative-earning .profit, #calc-content-div .positive-earning .profit {
+		width: 100% !important;
+	}
+	
+	#calc-content-div .negative-earning .earnings, #calc-content-div .positive-earning .earnings, #calc-content-div .negative-earning .electricity, #calc-content-div .positive-earning .electricity {
+		width: 33% !important;
+	}
+	
+	#calc-content-div .half-section-calc {
+	    display: block !important;
+	    width: 94% !important;
+	}
+	
+	#calc-content-div .negative-earning, #calc-content-div .positive-earning {
+    	padding-top: 35px !important;
+	}
+
+}
+
+@media (max-width: 540px) { 
+	.entry #calc-content-div .negative-earning .earnings, .entry #calc-content-div .positive-earning .earnings, .entry #calc-content-div .negative-earning .electricity, .entry #calc-content-div .positive-earning .electricity {
+		width: 100% !important;
+		border-right: 0px solid #ccc !important;
+	}
+}
+
+// terms list
+
+.term-wrapper {
+	margin-bottom: 15px; 
+}
+
+.term-name {
+       font-weight: bold; 
+}
+
+.term-name::after {
+	content: " - "
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";
