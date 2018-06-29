@@ -21,8 +21,19 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
             
             var til_halving = 630000 - height;
             append_html += "<br>Blocks Until Halving: " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            
+            block_time = 9.3;
+            var minutes_til_halving = til_halving * block_time;
+            var days_til_halving = minutes_til_halving / (24 * 60);
+            var minutes = days_til_halving - Math.floor(days_til_halving);
+            
+            console.log(minutes_til_halving);
+            
+             console.log(days_til_halving);
+             
+              console.log(minutes);
 
-            console.log(append_html);
+
 
             $("#calc-content-div").append(append_html);
         });
