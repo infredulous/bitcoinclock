@@ -164,6 +164,10 @@ img {
   }
 }
 
+header {
+	text-align: center;
+}
+
 .site-avatar {
   float: left;
   width: 70px;
@@ -187,7 +191,6 @@ img {
 }
 
 .site-info {
-  float: left;
 
   @include mobile {
     float: none;
