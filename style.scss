@@ -159,6 +159,10 @@ img {
   padding: 20px 0;
   border-bottom: 0px solid $lightGray;
   text-align: center;
+  
+  h1 {
+	  text-align: center;
+  }
 
   @include mobile {
     text-align: center;
