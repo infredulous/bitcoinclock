@@ -13,8 +13,8 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
         $.getJSON("https://www.satochi.co/latest-block", function( data ) {
             console.log(data);
             var height = data;
-            var blocks_left = 630000 - height;
-            var append_html = "<p>Blocks left before halving<br><span style='font-size: 2rem;font-weight: 100'>" + blocks_left + "</span></p>";
+            var total_number = 12.5 * (height - 472500) + 16406250;
+            var append_html = "<p>Total number of bitcoins in existence<br><span style='font-size: 2rem;font-weight: 100'>" + total_number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</span></p>";
 
             var cur_inflation = 12.5 * 144 * 365.25 / total_number * 100;
             append_html += "<br>Current Inflation: " + cur_inflation.toFixed(3) + "%";
