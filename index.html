@@ -44,6 +44,12 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 				var year = d.getUTCFullYear();
 
 				$('#date_eta').append("April" + " " + day + ", " + year);
+				
+				var hours_label = "hours";
+				
+				if (days_remainder = 1) {
+					hours_label = "hour";
+				}
 
 
             $("#calc-content-div").append(append_html);
@@ -52,7 +58,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 </script>
 
 
-<p style="text-align: center; color: black;"><b>Block Halving ETA:</b> <span style="font-weight: bold;" id="days_calc"></span> days, <span style="font-weight: bold;" id="hours_calc"></span> hours, <span style="font-weight: bold;" id="minutes_calc"></span> minutes</p>
+<p style="text-align: center; color: black;"><b>Block Halving ETA:</b> <span style="font-weight: bold;" id="days_calc"></span> days, <span style="font-weight: bold;" id="hours_calc"></span> <span id="hours_label"></span>, <span style="font-weight: bold;" id="minutes_calc"></span> minutes</p>
 
 <p style="text-align: center; color: black;"><b>Date ETA:</b> <span id="date_eta"></span></p>
 
