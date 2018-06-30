@@ -23,6 +23,11 @@
   width: 600px;
   margin: 0 auto;
   margin-top: -15px;
+  
+  @include mobile {
+    width: 100%;
+    height: 20em;
+  }
 }
 
 .clock.simple:after {
