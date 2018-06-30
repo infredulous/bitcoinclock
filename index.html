@@ -12,11 +12,11 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
         $.getJSON("https://www.satochi.co/latest-block", function( data ) {
             var height = data;
             var total_number = 12.5 * (height - 472500) + 16406250;
-            var append_html = "<p>" + total_number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</p>";
+            var append_html = "<span></span>";
 
             
             var til_halving = 630000 - height;
-            append_html += "Blocks Until Halving: " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            append_html += "<b>Blocks Until Halving:</b> " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             
             block_time = 9.3;
             var minutes_til_halving = til_halving * block_time;
