@@ -39,7 +39,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
                 var d = new Date( Date.now() + ((days_til_halving * 24 + days_remainder) * 60 + minutes) * 60 * 1000); 
                 console.log(d);
                 
-                var month = d.getUTCMonth() + 1;
+                var month = d.getMonth() + 1;
 				var day = d.getUTCDate();
 				var year = d.getUTCFullYear();
 
