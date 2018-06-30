@@ -38,8 +38,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
                 // var d = new Date( Date.now() + ((Math.floor(days_til_halving) * 24 + Math.floor(days_remainder * 24)) * 60 + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")) * 3600) ;
                 var d = new Date( Date.now() + ((days_til_halving * 24 + days_remainder) * 60 + minutes) * 60 * 1000); 
                 console.log(d);
-                var d1 = new Date( Date.now() + ((648 * 24 + days_remainder) * 60 + minutes) * 60 * 1000); 
-                console.log(d1);
+                $('#date_eta').append(d);
 
 
 
@@ -50,6 +49,8 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 
 
 <p style="text-align: center; color: black;"><b>Block Halving ETA:</b> <span style="font-weight: bold;" id="days_calc"></span> days, <span style="font-weight: bold;" id="hours_calc"></span> hours, <span style="font-weight: bold;" id="minutes_calc"></span> minutes</p>
+
+<p style="text-align: center; color: black;"><b>Date ETA:</b> <span style="font-weight: bold;" id="date_eta"></span></p>
 
 <!-- <img src="/clock.png" style="width: 500px;display: block;margin: 0 auto;"> -->
 
