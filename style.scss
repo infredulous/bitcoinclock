@@ -68,6 +68,10 @@
     width: 2%;
     border-radius: 7px 7px 0 0;
     transform: rotate(191deg);
+    
+    @include mobile {
+    	height: 20%;
+  }
 }
 
 
