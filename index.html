@@ -32,6 +32,8 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
               console.log("Minutes until halving - " + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
               
               $('#days_calc').append(Math.floor(days_til_halving));
+               $('#hours_calc').append(Math.floor(days_remainder * 24));
+                $('#minutes_calc').append(((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
 
 
@@ -41,7 +43,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 </script>
 
 
-<p><b>Block Halving ETA:</b> <span id="days_calc"></span> days</p>
+<p><b>Block Halving ETA:</b> <span id="days_calc"></span> days, <span id="hours_calc"></span> hours, <span id="minutes_calc"></span> days</p>
 
 <img src="/clock.png" style="width: 500px;display: block;margin: 0 auto;">
 
