@@ -16,11 +16,13 @@
 .clock {
   border-radius: 50%;
   background: #fff url(/clock.png) no-repeat center;
-  background-size: 88%;
+  background-size: 97%;
   height: 600px;
   padding-bottom: 31%;
   position: relative;
   width: 600px;
+  margin: 0 auto;
+  margin-top: -15px;
 }
 
 .clock.simple:after {
@@ -45,13 +47,14 @@
 }
 
 .minutes {
-  background: #000;
-  height: 40%;
-  left: 49%;
-  position: absolute;
-  top: 10%;
-  transform-origin: 50% 100%;
-  width: 2%;
+    background: #000;
+    height: 30%;
+    left: 50%;
+    position: absolute;
+    top: 20%;
+    transform-origin: 50% 100%;
+    width: 2%;
+    border-radius: 7px 7px 0 0;
 }
 
 
