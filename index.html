@@ -36,7 +36,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
                 $('#minutes_calc').append(((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 
                 // var d = new Date( Date.now() + ((Math.floor(days_til_halving) * 24 + Math.floor(days_remainder * 24)) * 60 + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")) * 3600) ;
-                var d = new Date( Date.now() + ((646 * 24 + 5) * 60 + 13) * 60 * 1000); 
+                var d = new Date( Date.now() + ((days_til_halving * 24 + days_remainder) * 60 + minutes) * 60 * 1000); 
                 console.log(d);
 
 
