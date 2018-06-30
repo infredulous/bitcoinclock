@@ -88,6 +88,11 @@
     background-color: #000;
     width: 5%;
     height: 5%;
+    
+     @include mobile {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 iframe {
