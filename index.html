@@ -25,15 +25,18 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
             var minutes = days_remainder - Math.floor(days_remainder);
             
             
-             console.log("Days until halving - " + Math.floor(days_til_halving));
+             // console.log("Days until halving - " + Math.floor(days_til_halving));
              
-              console.log("Hours until halving - " + Math.floor(days_remainder * 24));
+             //  console.log("Hours until halving - " + Math.floor(days_remainder * 24));
               
-              console.log("Minutes until halving - " + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+             //  console.log("Minutes until halving - " + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
               
               $('#days_calc').append(Math.floor(days_til_halving));
                $('#hours_calc').append(Math.floor(days_remainder * 24));
                 $('#minutes_calc').append(((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                
+                var d = new Date();
+                console.log(d);
 
 
 
