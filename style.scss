@@ -70,7 +70,8 @@
     transform: rotate(191deg);
     
     @include mobile {
-    	height: 20%;
+    	height: 15%;
+    	top: 35%;
   }
 }
 
