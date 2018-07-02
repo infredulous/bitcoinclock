@@ -69,7 +69,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 				
 				let minutes_label = "minutes";
 				
-				if (Math.floor(minutes * 60) === 1) {
+				if (((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") === 1) {
 					minutes_label = "minute";
 				}
 				
