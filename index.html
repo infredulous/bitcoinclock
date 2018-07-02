@@ -65,11 +65,11 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 				
 				$("#hours_label").append(hours_label);
 				
-				console.log(minutes);
+				console.log(((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 				
 				let minutes_label = "minutes";
 				
-				if (((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") === 1) {
+				if (test === 1) {
 					minutes_label = "minute";
 				}
 				
