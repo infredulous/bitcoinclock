@@ -37,13 +37,13 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
                 
                 // var d = new Date( Date.now() + ((Math.floor(days_til_halving) * 24 + Math.floor(days_remainder * 24)) * 60 + ((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")) * 3600) ;
                 var d = new Date( Date.now() + ((days_til_halving * 24 + days_remainder) * 60 + minutes) * 60 * 1000); 
-                console.log(d);
+                // console.log(d);
                 
                 var month = d.getMonth() + 1;
 				var day = d.getUTCDate();
 				var year = d.getUTCFullYear();
 				
-				console.log(month);
+				// console.log(month);
 				
 				if (month === 4) {
 					var month_name = "April";
