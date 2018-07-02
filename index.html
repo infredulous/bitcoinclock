@@ -42,8 +42,12 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
                 var month = d.getMonth() + 1;
 				var day = d.getUTCDate();
 				var year = d.getUTCFullYear();
+				
+				if (month === 4) {
+					var month_name = "April";
+				}
 
-				$('#date_eta').append("April" + " " + day + ", " + year);
+				$('#date_eta').append(month_name + " " + day + ",f " + year);
 				
 				let hours_label = "hours";
 				
