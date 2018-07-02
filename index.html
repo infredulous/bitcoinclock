@@ -43,6 +43,8 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 				var day = d.getUTCDate();
 				var year = d.getUTCFullYear();
 				
+				console.log(month);
+				
 				if (month === 4) {
 					var month_name = "April";
 				}
@@ -64,9 +66,7 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
 				}
 				
 				$("#hours_label").append(hours_label);
-				
-				console.log();
-				
+								
 				let minutes_label = "minutes";
 				
 				if ((((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")) == 1) {
