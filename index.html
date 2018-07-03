@@ -23,6 +23,10 @@ title: "Bitcoin Clock: 2020 Bitcoin Halving Countdown"
             var days_til_halving = minutes_til_halving / (24 * 60);
             var days_remainder = days_til_halving - Math.floor(days_til_halving);
             var minutes = days_remainder - Math.floor(days_remainder);
+            var percent_done = (((height % 210000) / 210000) * 360);
+                        
+            $(".minutes").css("transform", "rotate(" + percent_done +"deg)");
+            // $(".minutes").css("transform", "rotate(189deg)");
                         
              // console.log("Days until halving - " + Math.floor(days_til_halving));
              
