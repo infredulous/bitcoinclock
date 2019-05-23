@@ -17,7 +17,7 @@ permalink: "/es/"
 
             
             var til_halving = 630000 - height;
-            append_html += "<b>Blocks Until Halving:</b> " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            append_html += "<b>Bloques hasta el halving:</b> " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             
             var block_time = 9.92666;
             var minutes_til_halving = til_halving * block_time;
@@ -39,31 +39,31 @@ permalink: "/es/"
 				var year = d.getUTCFullYear();
 								
 				if (month === 4) {
-					var month_name = "April";
+					var month_name = "Abril";
 				}
 				
 				else if (month === 5) {
-					var month_name = "May";
+					var month_name = "Mayo";
 				}
 				
 				else if (month === 3) {
-					var month_name = "March";
+					var month_name = "Marzo";
 				}
 
 				$('#date_eta').append(month_name + " " + day + ", " + year);
 				
-				let hours_label = "hours";
+				let hours_label = "horas";
 				
 				if (Math.floor(days_remainder * 24) == 1) {
-					hours_label = "hour";
+					hours_label = "hora";
 				}
 				
 				$("#hours_label").append(hours_label);
 								
-				let minutes_label = "minutes";
+				let minutes_label = "minutos";
 				
 				if ((((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")) == 1) {
-					minutes_label = "minute";
+					minutes_label = "minuto";
 				}
 				
 				$("#minutes_label").append(minutes_label);
