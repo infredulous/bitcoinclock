@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>{{ page.seo_title }}</title>
+    
+    {% for post in site.pages %}
+	{% if post.pagename == page.pagename %}	
+    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+    {% endif %}  			
+	{% endfor %}
 
     {% include meta.html %}
 
